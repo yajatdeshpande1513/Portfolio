@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yajat's Portfolio | Home</title>
+    <link rel="icon" href="images/fav-logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="css/navbar.css" />
+    <link rel="stylesheet" href="css/mysocialmedia.css" />
+    <link rel="stylesheet" href="css/banner.css" />
+    <link rel="stylesheet" href="css/about-footer.css" />
+    <link rel="stylesheet" href="css/reveal.css" />
+  </head>
+  <style>
+    :root {
+      --color-1: rgb(0, 209, 0);
+      --color-2: black;
+      --card-color1: rgb(0, 209, 0);
+      --card-color2: rgb(0, 153, 255);
+      --card-color3: rgb(255, 0, 150);
+      --card-color4: rgb(255, 153, 0);
+      --card-color5: rgb(255, 0, 0);
+      --card-color6: rgb(153, 0, 255);
+      --card-color7: rgb(0, 255, 255);
+      --card-color8: rgb(255, 255, 0);
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+      scroll-behavior: smooth;
+    }
+  </style>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="row align-items-center justify-content-between">
+          <div class="logo">
+            <img src="images/logo.png" alt="" class="my-logo" />
+          </div>
+          <button type="button" class="nav-toggler">
+            <span></span>
+          </button>
+          <nav class="nav">
+            <ul>
+              <li><a href="/home" class="nav-btn active">Home</a></li>
+              <li><a href="/skills" class="nav-btn">Skills & Experience</a></li>
+              <li><a href="/projects" class="nav-btn">Projects</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <div class="mysocialhandles reveal-left">
+      <a href="https://www.linkedin.com/in/yajat-deshpande-751a36290/">
+        <img src="images/linkedin.png" alt="LinkedIn" />
+      </a>
+      <a href="https://github.com/yajatdeshpande1513">
+        <img src="images/github.png" alt="GitHub" />
+      </a>
+      <a href="https://www.youtube.com/">
+        <img src="images/youtube.png" alt="YouTube" />
+      </a>
+      <a href="https://www.instagram.com/">
+        <img src="images/instagram.png" alt="Instagram" />
+      </a>
+    </div>
+
+    <div class="my-banner">
+      <div class="my-banner-left reveal-down">
+        <p class="head1">Hey there, it's me</p>
+        <p class="head2">Yajat Deshpande.</p>
+        <p class="head3">
+          I am a Full Stack Developer, a programmer <br />
+          & AIML Enthusaist with Honors in Cyber Security.
+        </p>
+      </div>
+      <div class="my-banner-right reveal-left">
+        <div class="empty-div"></div>
+        <img src="images/banner-profile.png" alt="" />
+      </div>
+    </div>
+    <div class="about-me reveal-up" id="aboutme">
+      <p class="head1 reveal-left">Who Am I ?</p>
+      <p class="head2 reveal-right">
+I am an aspiring Software Engineer passionate about tackling complex, real-time problems and leveraging a robust foundation in Python, Java, and JavaScript to drive development and create impactful products.
+I am a proactive problem-solver with a proven capacity for adapting to unexpected challenges, demonstrated through my projects and community involvement.
+      </p>
+    </div>
+    <footer>
+      <div class="head1">For more details you can also Visit</div>
+      <div class="head2 reveal-down">
+        <nav class="nav2">
+          <ul>
+            <li><a href="/home" class="nav-btn active">Home</a></li>
+            <li><a href="/skills" class="nav-btn">Skills & Experience</a></li>
+            <li><a href="/projects" class="nav-btn">Projects</a></li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+  </body>
+  <script src="js/navbar.js"></script>
+  <script src="js/randomcolor.js"></script>
+  <script src="js/reveal.js"></script>
+  <script>
+    randomtheme();
+  </script>
+  <script>
+    function revealElements() {
+      const reveals = document.querySelectorAll(
+        ".reveal-up, .reveal-down, .reveal-left, .reveal-right"
+      );
+      for (let i = 0; i < reveals.length; i++) {
+        const windowHeight = window.innerHeight;
+        const elementTop = reveals[i].getBoundingClientRect().top;
+        const elementVisible = 150;
+        if (elementTop < windowHeight - elementVisible) {
+          reveals[i].classList.add("active");
+        } else {
+          reveals[i].classList.remove("active");
+        }
+      }
+    }
+
+    window.addEventListener("load", revealElements);
+    window.addEventListener("scroll", revealElements);
+  </script>
+</html>
