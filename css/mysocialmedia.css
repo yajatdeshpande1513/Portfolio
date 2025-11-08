@@ -1,0 +1,30 @@
+.mysocialhandles {
+display: flex;
+flex-direction: column;
+position: fixed;
+z-index: 5;
+top: 40%;
+background-color: var(--color-1);
+padding: 15px 10px;
+border-top-right-radius: 10px;
+border-bottom-right-radius: 10px;
+/* border: 1px solid var(--color-2); */
+}
+.mysocialhandles a img {
+width: 25px;
+padding: 10px 0px;
+}
+.mysocialhandles a img:hover{
+width: 30px;
+}
+@media (max-width: 1500px) {
+.mysocialhandles {
+top: 60%;
+}
+}
+@media (max-width: 600px) {
+.mysocialhandles {
+    top:20%;
+    padding: 15px 5px;
+}
+}
